@@ -3,26 +3,39 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Rating of cats-->
         <scene sceneID="Q5D-pQ-XMt">
             <objects>
-                <tableViewController id="glr-wM-yuR" sceneMemberID="viewController">
+                <tableViewController id="glr-wM-yuR" customClass="RatingTableViewController" customModule="CatBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="N7S-VS-6Ff">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ratingOfCats" id="9k7-vu-EIK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ratingOfCats" textLabel="qQu-nR-9xA" style="IBUITableViewCellStyleDefault" id="9k7-vu-EIK">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9k7-vu-EIK" id="TQR-sK-atA">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qQu-nR-9xA">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SqE-B3-F5k" kind="show" id="u95-cG-evc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,18 +43,69 @@
                             <outlet property="delegate" destination="glr-wM-yuR" id="7mG-yP-M5A"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="FTF-mA-Rod"/>
+                    <navigationItem key="navigationItem" title="Rating of cats" id="FTF-mA-Rod"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W96-5o-GfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1013" y="153"/>
         </scene>
+        <!--Cat page-->
+        <scene sceneID="zxU-yZ-yZW">
+            <objects>
+                <viewController id="SqE-B3-F5k" customClass="CatPageViewController" customModule="CatBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PmV-h7-hyP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-Kd-S2e">
+                                <rect key="frame" x="20" y="160" width="374" height="350"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tMh-3g-NFG">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="259.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name cat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oez-MH-fN6">
+                                        <rect key="frame" x="0.0" y="279.5" width="374" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description cat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cT-zw-Ldz">
+                                        <rect key="frame" x="0.0" y="329.5" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="9rt-B6-ojj"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QkZ-aI-pDO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X3u-Kd-S2e" firstAttribute="top" secondItem="QkZ-aI-pDO" secondAttribute="top" constant="20" id="TSW-L1-laa"/>
+                            <constraint firstItem="QkZ-aI-pDO" firstAttribute="trailing" secondItem="X3u-Kd-S2e" secondAttribute="trailing" constant="20" id="flS-sa-rg3"/>
+                            <constraint firstItem="X3u-Kd-S2e" firstAttribute="leading" secondItem="QkZ-aI-pDO" secondAttribute="leading" constant="20" id="jDg-nj-ETc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cat page" id="5oM-ny-c4o"/>
+                    <connections>
+                        <outlet property="descriptionСatLable" destination="0cT-zw-Ldz" id="C6h-Z8-U02"/>
+                        <outlet property="imageCat" destination="tMh-3g-NFG" id="bvC-94-UQu"/>
+                        <outlet property="nameCatLable" destination="oez-MH-fN6" id="hhj-8z-HEs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcx-XA-0sv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1736" y="153"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="qYM-4I-BDk">
             <objects>
                 <navigationController id="899-HZ-Tmb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U7w-MO-ASn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="U7w-MO-ASn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

@@ -13,6 +13,7 @@
 		42A39F3D273FDE6F00F8B2BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A39F3C273FDE6F00F8B2BA /* Assets.xcassets */; };
 		42A39F40273FDE6F00F8B2BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A39F3E273FDE6F00F8B2BA /* LaunchScreen.storyboard */; };
 		FB7E60692740095800413E30 /* RatingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7E60682740095800413E30 /* RatingTableViewController.swift */; };
+		FB7E606B2740119200413E30 /* CatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7E606A2740119200413E30 /* CatPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		42A39F3F273FDE6F00F8B2BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42A39F41273FDE6F00F8B2BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB7E60682740095800413E30 /* RatingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewController.swift; sourceTree = "<group>"; };
+		FB7E606A2740119200413E30 /* CatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				42A39F35273FDE6E00F8B2BA /* SceneDelegate.swift */,
 				42A39F39273FDE6E00F8B2BA /* Main.storyboard */,
 				FB7E60682740095800413E30 /* RatingTableViewController.swift */,
+				FB7E606A2740119200413E30 /* CatPageViewController.swift */,
 				42A39F3C273FDE6F00F8B2BA /* Assets.xcassets */,
 				42A39F3E273FDE6F00F8B2BA /* LaunchScreen.storyboard */,
 				42A39F41273FDE6F00F8B2BA /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				42A39F34273FDE6E00F8B2BA /* AppDelegate.swift in Sources */,
 				FB7E60692740095800413E30 /* RatingTableViewController.swift in Sources */,
+				FB7E606B2740119200413E30 /* CatPageViewController.swift in Sources */,
 				42A39F36273FDE6E00F8B2BA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
