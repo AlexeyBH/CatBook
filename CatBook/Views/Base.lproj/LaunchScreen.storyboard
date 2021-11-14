@@ -17,18 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CatBook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgy-0W-bqi">
-                                <rect key="frame" x="156.5" y="437" width="101.5" height="32.5"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="8Uz-wf-ojE">
+                                <rect key="frame" x="107" y="312" width="200" height="272.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CatImage_5" translatesAutoresizingMaskIntoConstraints="NO" id="WA8-ic-Qa7">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="ae7-Vb-2RI"/>
+                                            <constraint firstAttribute="height" constant="200" id="opV-qU-K4l"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CatBook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgy-0W-bqi">
+                                        <rect key="frame" x="49.5" y="240" width="101.5" height="32.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bgy-0W-bqi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="g8W-dI-nT6"/>
-                            <constraint firstItem="bgy-0W-bqi" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="vz5-am-zs3"/>
+                            <constraint firstItem="8Uz-wf-ojE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6G0-VY-Gyo"/>
+                            <constraint firstItem="8Uz-wf-ojE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6RO-Sf-krQ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +50,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CatImage_5" width="600" height="600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
