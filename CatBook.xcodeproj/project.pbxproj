@@ -12,7 +12,6 @@
 		42A39F3B273FDE6E00F8B2BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A39F39273FDE6E00F8B2BA /* Main.storyboard */; };
 		42A39F3D273FDE6F00F8B2BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A39F3C273FDE6F00F8B2BA /* Assets.xcassets */; };
 		42A39F40273FDE6F00F8B2BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A39F3E273FDE6F00F8B2BA /* LaunchScreen.storyboard */; };
-		4A4AAA592741762700D02CF1 /* RatingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AAA572741762700D02CF1 /* RatingTableViewController.swift */; };
 		4A4AAA5C274176A300D02CF1 /* RatingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AAA5B274176A300D02CF1 /* RatingTableViewCell.swift */; };
 		4A4AAA5E274178C600D02CF1 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AAA5D274178C600D02CF1 /* RatingViewController.swift */; };
 		4ADE339A274160A7007726BE /* RatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE3398274160A7007726BE /* RatingTableViewCell.xib */; };
@@ -27,7 +26,6 @@
 		42A39F3C273FDE6F00F8B2BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42A39F3F273FDE6F00F8B2BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42A39F41273FDE6F00F8B2BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A4AAA572741762700D02CF1 /* RatingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingTableViewController.swift; sourceTree = "<group>"; };
 		4A4AAA5B274176A300D02CF1 /* RatingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingTableViewCell.swift; sourceTree = "<group>"; };
 		4A4AAA5D274178C600D02CF1 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		4ADE3398274160A7007726BE /* RatingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingTableViewCell.xib; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				4A4AAA5A2741767300D02CF1 /* Cells */,
-				4A4AAA572741762700D02CF1 /* RatingTableViewController.swift */,
 				FB7E606A2740119200413E30 /* CatPageViewController.swift */,
 				4A4AAA5D274178C600D02CF1 /* RatingViewController.swift */,
 			);
@@ -195,7 +192,6 @@
 				FB7E606B2740119200413E30 /* CatPageViewController.swift in Sources */,
 				4A4AAA5C274176A300D02CF1 /* RatingTableViewCell.swift in Sources */,
 				4A4AAA5E274178C600D02CF1 /* RatingViewController.swift in Sources */,
-				4A4AAA592741762700D02CF1 /* RatingTableViewController.swift in Sources */,
 				42A39F36273FDE6E00F8B2BA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

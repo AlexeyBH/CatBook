@@ -10,31 +10,6 @@
     </dependencies>
     <scenes>
         <!--Рейтинг котов-->
-        <scene sceneID="Q5D-pQ-XMt">
-            <objects>
-                <tableViewController id="glr-wM-yuR" customClass="RatingTableViewController" customModule="CatBook" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="N7S-VS-6Ff">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="glr-wM-yuR" id="6nt-WL-tKg"/>
-                            <outlet property="delegate" destination="glr-wM-yuR" id="7mG-yP-M5A"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Рейтинг котов" id="FTF-mA-Rod">
-                        <barButtonItem key="rightBarButtonItem" title="О нас" id="iFH-K8-8nn">
-                            <connections>
-                                <segue destination="SEF-3S-ovS" kind="show" id="YmT-lE-nFO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W96-5o-GfV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1013" y="153"/>
-        </scene>
-        <!--Рейтинг котов-->
         <scene sceneID="fTO-HD-omM">
             <objects>
                 <viewController id="HPu-26-Kfo" customClass="RatingViewController" customModule="CatBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,15 +32,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Рейтинг котов" id="qdK-fU-VHL">
-                        <barButtonItem key="rightBarButtonItem" title="О нас" id="RdZ-1I-TUr"/>
+                        <barButtonItem key="rightBarButtonItem" title="О нас" id="RdZ-1I-TUr">
+                            <connections>
+                                <action selector="aboutUsButtonPressed:" destination="HPu-26-Kfo" id="0N9-0o-95G"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6RY-B3-EJ6" id="m36-Q4-0BK"/>
+                        <segue destination="SEF-3S-ovS" kind="show" identifier="showAboutScreen" id="pCd-uK-H1t"/>
+                        <segue destination="SqE-B3-F5k" kind="show" identifier="showCatDetailScreen" id="ewx-hn-RhE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzq-ae-6vb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036" y="907"/>
+            <point key="canvasLocation" x="894" y="153"/>
         </scene>
         <!--About Us-->
         <scene sceneID="pYM-Wu-hF6">
@@ -118,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHC-JS-gDh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1735" y="-508"/>
+            <point key="canvasLocation" x="1670" y="-172"/>
         </scene>
         <!--Cat page-->
         <scene sceneID="zxU-yZ-yZW">
@@ -129,7 +110,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="X3u-Kd-S2e">
-                                <rect key="frame" x="20" y="64" width="374" height="320.5"/>
+                                <rect key="frame" x="20" y="160" width="374" height="320.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tMh-3g-NFG">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="230"/>
@@ -169,23 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcx-XA-0sv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736" y="153"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="qYM-4I-BDk">
-            <objects>
-                <navigationController id="899-HZ-Tmb" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="U7w-MO-ASn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="glr-wM-yuR" kind="relationship" relationship="rootViewController" id="foh-ft-g26"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hYE-fF-69o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="120" y="153"/>
+            <point key="canvasLocation" x="1670" y="482"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dIa-xY-G0k">
@@ -203,7 +168,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCT-hs-9IJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="907"/>
+            <point key="canvasLocation" x="-59" y="153"/>
         </scene>
     </scenes>
     <resources>

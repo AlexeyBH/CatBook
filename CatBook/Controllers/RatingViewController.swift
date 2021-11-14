@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RatingViewController: UIViewController, UITableViewDelegate {
+class RatingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,7 +17,13 @@ class RatingViewController: UIViewController, UITableViewDelegate {
         
         tableView.register(UINib(nibName: "RatingTableViewCell", bundle: nil), forCellReuseIdentifier: "RatingTableViewCell")
     }
-    
+}
+
+//MARK: - @IBAction
+extension RatingViewController {
+    @IBAction func aboutUsButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "showAboutScreen", sender: nil)
+    }
 }
 
 //MARK: - UITableViewDataSource
@@ -35,5 +41,13 @@ extension RatingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
+    }
+}
+
+//MARK: - UITableViewDelegate
+extension RatingViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showCatDetailScreen", sender: nil)
     }
 }
