@@ -4,46 +4,49 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ratingTableViewCell" rowHeight="109" id="KGk-i7-Jjw" customClass="RatingTableViewCell" customModule="CatBook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="371" height="109"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="371" height="109"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RatingTableViewCell" rowHeight="94" id="Lom-EI-1l7" customClass="RatingTableViewCell" customModule="CatBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="94"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lom-EI-1l7" id="RIc-8R-qR9">
+                <rect key="frame" x="0.0" y="0.0" width="371" height="94"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W23-yi-Cdx">
-                        <rect key="frame" x="0.0" y="0.0" width="371" height="109"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkS-vb-q7k">
+                        <rect key="frame" x="16" y="2" width="353" height="90"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Zw-rR-QSj">
-                                <rect key="frame" x="0.0" y="0.0" width="185.5" height="109"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k1o-1e-Pub">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="HSh-yl-XSC"/>
+                                    <constraint firstAttribute="height" constant="90" id="jrI-J5-yfP"/>
+                                </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otD-E4-3zD">
-                                <rect key="frame" x="185.5" y="0.0" width="185.5" height="109"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lTA-jx-o47">
+                                <rect key="frame" x="90" y="0.0" width="263" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykA-3T-Y9J">
-                                        <rect key="frame" x="8" y="32" width="169.5" height="19.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPI-n4-ikU">
+                                        <rect key="frame" x="8" y="2" width="247" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fab-iG-uD2">
-                                        <rect key="frame" x="8" y="53.5" width="51" height="14.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cDP-Lf-D76">
+                                        <rect key="frame" x="8" y="23.5" width="51" height="14.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VIo-Pa-2DH">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Sgw-YB-XHW">
                                                 <rect key="frame" x="0.0" y="2" width="12" height="12"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="12" id="b7J-rI-Thz"/>
-                                                    <constraint firstAttribute="height" constant="12" id="h5Z-yh-YxP"/>
+                                                    <constraint firstAttribute="width" constant="12" id="Ivo-rz-OCR"/>
+                                                    <constraint firstAttribute="height" constant="12" id="Nmr-DC-seg"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8H-IP-KE1">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SW5-mv-jMt">
                                                 <rect key="frame" x="20" y="0.0" width="31" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -54,31 +57,29 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="fab-iG-uD2" firstAttribute="top" secondItem="ykA-3T-Y9J" secondAttribute="bottom" constant="2" id="B2m-Qi-OsJ"/>
-                                    <constraint firstItem="ykA-3T-Y9J" firstAttribute="top" secondItem="otD-E4-3zD" secondAttribute="top" constant="32" id="HDH-fr-hKt"/>
-                                    <constraint firstAttribute="trailing" secondItem="ykA-3T-Y9J" secondAttribute="trailing" constant="8" id="J7W-8p-ykp"/>
-                                    <constraint firstItem="fab-iG-uD2" firstAttribute="leading" secondItem="otD-E4-3zD" secondAttribute="leading" constant="8" id="JGc-vS-nEk"/>
-                                    <constraint firstItem="ykA-3T-Y9J" firstAttribute="leading" secondItem="otD-E4-3zD" secondAttribute="leading" constant="8" id="Tqu-yx-dzJ"/>
+                                    <constraint firstItem="aPI-n4-ikU" firstAttribute="leading" secondItem="lTA-jx-o47" secondAttribute="leading" constant="8" id="0ye-nF-SWi"/>
+                                    <constraint firstItem="cDP-Lf-D76" firstAttribute="top" secondItem="aPI-n4-ikU" secondAttribute="bottom" constant="2" id="6Q8-1B-mIO"/>
+                                    <constraint firstItem="aPI-n4-ikU" firstAttribute="top" secondItem="lTA-jx-o47" secondAttribute="top" constant="2" id="MRg-nV-P85"/>
+                                    <constraint firstItem="cDP-Lf-D76" firstAttribute="leading" secondItem="lTA-jx-o47" secondAttribute="leading" constant="8" id="TTE-Rk-6P2"/>
+                                    <constraint firstAttribute="trailing" secondItem="aPI-n4-ikU" secondAttribute="trailing" constant="8" id="eME-pz-za3"/>
                                 </constraints>
                             </view>
                         </subviews>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="W23-yi-Cdx" secondAttribute="bottom" id="CbH-9I-8OH"/>
-                    <constraint firstAttribute="trailing" secondItem="W23-yi-Cdx" secondAttribute="trailing" id="OVc-AK-rDr"/>
-                    <constraint firstItem="2Zw-rR-QSj" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.5" id="Uzl-jT-zyx"/>
-                    <constraint firstItem="W23-yi-Cdx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jPg-1S-hF9"/>
-                    <constraint firstItem="W23-yi-Cdx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="s4o-Qa-60O"/>
+                    <constraint firstItem="dkS-vb-q7k" firstAttribute="leading" secondItem="RIc-8R-qR9" secondAttribute="leading" constant="16" id="4sU-jq-fFr"/>
+                    <constraint firstAttribute="bottom" secondItem="dkS-vb-q7k" secondAttribute="bottom" constant="2" id="G13-zv-e8W"/>
+                    <constraint firstAttribute="trailing" secondItem="dkS-vb-q7k" secondAttribute="trailing" constant="2" id="nSU-ox-hMv"/>
+                    <constraint firstItem="dkS-vb-q7k" firstAttribute="top" secondItem="RIc-8R-qR9" secondAttribute="top" constant="2" id="ugn-WZ-7Wc"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="catImegeView" destination="2Zw-rR-QSj" id="Zaq-Wa-zCR"/>
-                <outlet property="catNameLabel" destination="ykA-3T-Y9J" id="7eP-oe-knF"/>
-                <outlet property="catRatingLabel" destination="Q8H-IP-KE1" id="dpn-YS-sKq"/>
+                <outlet property="catImegeView" destination="k1o-1e-Pub" id="G6I-jt-kxU"/>
+                <outlet property="catNameLabel" destination="aPI-n4-ikU" id="cye-ko-8Vw"/>
+                <outlet property="catRatingLabel" destination="SW5-mv-jMt" id="XjF-zt-lAE"/>
             </connections>
-            <point key="canvasLocation" x="142.75362318840581" y="134.26339285714286"/>
+            <point key="canvasLocation" x="142.75362318840581" y="-15.401785714285714"/>
         </tableViewCell>
     </objects>
     <resources>
