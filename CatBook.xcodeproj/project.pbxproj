@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421D44C3274458B5000F29DE /* CatDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D44C2274458B5000F29DE /* CatDatabase.swift */; };
+		427142D02746AFCA00644664 /* catInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427142CF2746AFCA00644664 /* catInit.swift */; };
 		42A39F34273FDE6E00F8B2BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A39F33273FDE6E00F8B2BA /* AppDelegate.swift */; };
 		42A39F36273FDE6E00F8B2BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A39F35273FDE6E00F8B2BA /* SceneDelegate.swift */; };
 		42A39F3B273FDE6E00F8B2BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A39F39273FDE6E00F8B2BA /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		421D44C2274458B5000F29DE /* CatDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDatabase.swift; sourceTree = "<group>"; };
+		427142CF2746AFCA00644664 /* catInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = catInit.swift; sourceTree = "<group>"; };
 		42A39F30273FDE6E00F8B2BA /* CatBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A39F33273FDE6E00F8B2BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A39F35273FDE6E00F8B2BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		421D44C127445893000F29DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				421D44C2274458B5000F29DE /* CatDatabase.swift */,
+				427142CF2746AFCA00644664 /* catInit.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		42A39F27273FDE6E00F8B2BA = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +77,7 @@
 		42A39F32273FDE6E00F8B2BA /* CatBook */ = {
 			isa = PBXGroup;
 			children = (
+				421D44C127445893000F29DE /* Model */,
 				4AB2C8662742331400C70D91 /* Extensions */,
 				42A39F33273FDE6E00F8B2BA /* AppDelegate.swift */,
 				42A39F35273FDE6E00F8B2BA /* SceneDelegate.swift */,
@@ -201,7 +215,9 @@
 			files = (
 				42A39F34273FDE6E00F8B2BA /* AppDelegate.swift in Sources */,
 				FB7E606B2740119200413E30 /* CatPageViewController.swift in Sources */,
+				421D44C3274458B5000F29DE /* CatDatabase.swift in Sources */,
 				4AB2C8682742333800C70D91 /* UITableViewCell+Extensions.swift in Sources */,
+				427142D02746AFCA00644664 /* catInit.swift in Sources */,
 				4A4AAA5C274176A300D02CF1 /* RatingTableViewCell.swift in Sources */,
 				4A4AAA5E274178C600D02CF1 /* RatingViewController.swift in Sources */,
 				42A39F36273FDE6E00F8B2BA /* SceneDelegate.swift in Sources */,
