@@ -155,7 +155,7 @@ func catInit() -> [CatInfo] {
         CatHash(.Cat_08):   CatHash(.normal, .gray),
         CatHash(.Cat_09):   CatHash(.normal, .brown),
         CatHash(.Cat_10):   CatHash(.normal, .gray),
-        CatHash(.Cat_01):   CatHash(.lean, .gray),
+        CatHash(.Cat_11):   CatHash(.lean, .gray),
         CatHash(.Cat_12):   CatHash(.lean, .black),
     ]
     

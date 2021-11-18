@@ -58,7 +58,7 @@ class CatInfo {
 
 class CatDatabase {
     
-    let shared = CatDatabase()
+    static let shared = CatDatabase()
     
     private let cats: [CatInfo]
     

@@ -11,11 +11,27 @@ class RatingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private var cats: [CatInfo]?
+    
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
         
+        cats = CatDatabase.shared.catsByRating
+        
         tableView.register(RatingTableViewCell.nib, forCellReuseIdentifier: RatingTableViewCell.identifier)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guar
+        if segue.identifier == "showCatDetailScreen" {
+            guard let catPage = segue.destination as? CatPageViewController,
+                  let cat = cats?[0] else { return }
+            
+            //mock
+            //todo get selected cat index
+            catPage.cat = cat
+        }
     }
 }
 
@@ -29,17 +45,14 @@ extension RatingViewController {
 //MARK: - UITableViewDataSource
 extension RatingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return cats?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView
-                .dequeueReusableCell(
-                    withIdentifier: RatingTableViewCell.identifier,
-                    for: indexPath) as? RatingTableViewCell
-        else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: RatingTableViewCell.identifier, for: indexPath) as? RatingTableViewCell,
+              let cat = cats?[indexPath.row] else { return UITableViewCell() }
         
-        cell.configure(image: UIImage(named: "CatImage_1"), name: "Kitty", rating: "5")
+        cell.configure(image: UIImage(named: cat.imagePath), name: cat.name, rating: String(cat.rating))
         return cell
     }
     
