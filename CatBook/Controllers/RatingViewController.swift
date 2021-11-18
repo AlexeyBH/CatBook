@@ -23,7 +23,6 @@ class RatingViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guar
         if segue.identifier == "showCatDetailScreen" {
             guard let catPage = segue.destination as? CatPageViewController,
                   let cat = cats?[0] else { return }
