@@ -25,10 +25,8 @@ class RatingViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCatDetailScreen" {
             guard let catPage = segue.destination as? CatPageViewController,
-                  let cat = cats?[0] else { return }
+                  let cat = sender as? CatInfo else { return }
             
-            //mock
-            //todo get selected cat index
             catPage.cat = cat
         }
     }
@@ -64,6 +62,6 @@ extension RatingViewController: UITableViewDataSource {
 extension RatingViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showCatDetailScreen", sender: nil)
+        performSegue(withIdentifier: "showCatDetailScreen", sender: cats?[indexPath.row])
     }
 }
