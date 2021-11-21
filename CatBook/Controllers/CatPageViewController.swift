@@ -18,6 +18,7 @@ class CatPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = cat?.name
         imageCat.image = UIImage(named: cat?.imagePath ?? "")
         nameCatLable.text = cat?.name
         descriptionСatLable.text = cat?.description

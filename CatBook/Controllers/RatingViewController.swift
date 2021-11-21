@@ -50,7 +50,6 @@ extension RatingViewController: UITableViewDataSource {
         else { return UITableViewCell() }
         let cat = cats[indexPath.row]
         
-//        cell.configure(image: UIImage(named: "CatImage_1"), name: "Kitty", rating: "5")
         cell.configure(image: UIImage(named: cat.imagePath), name: cat.name, rating: String(cat.rating))
         return cell
     }
@@ -66,6 +65,5 @@ extension RatingViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         performSegue(withIdentifier: "showCatDetailScreen", sender: cats[indexPath.row])
-
     }
 }
