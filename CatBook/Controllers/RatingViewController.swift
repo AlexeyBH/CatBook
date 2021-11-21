@@ -10,12 +10,22 @@ import UIKit
 class RatingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    let cats = CatDatabase.shared.catsByRating
     
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
         
         tableView.register(RatingTableViewCell.nib, forCellReuseIdentifier: RatingTableViewCell.identifier)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCatDetailScreen" {
+            guard let catPage = segue.destination as? CatPageViewController,
+                  let cat = sender as? CatInfo else { return }
+
+            catPage.cat = cat
+        }
     }
 }
 
@@ -29,7 +39,7 @@ extension RatingViewController {
 //MARK: - UITableViewDataSource
 extension RatingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return cats.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,8 +48,10 @@ extension RatingViewController: UITableViewDataSource {
                     withIdentifier: RatingTableViewCell.identifier,
                     for: indexPath) as? RatingTableViewCell
         else { return UITableViewCell() }
+        let cat = cats[indexPath.row]
         
-        cell.configure(image: UIImage(named: "CatImage_1"), name: "Kitty", rating: "5")
+//        cell.configure(image: UIImage(named: "CatImage_1"), name: "Kitty", rating: "5")
+        cell.configure(image: UIImage(named: cat.imagePath), name: cat.name, rating: String(cat.rating))
         return cell
     }
     
@@ -52,6 +64,8 @@ extension RatingViewController: UITableViewDataSource {
 extension RatingViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showCatDetailScreen", sender: nil)
+//        performSegue(withIdentifier: "showCatDetailScreen", sender: nil)
+        performSegue(withIdentifier: "showCatDetailScreen", sender: cats[indexPath.row])
+
     }
 }
