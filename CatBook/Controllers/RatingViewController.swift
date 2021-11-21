@@ -25,6 +25,10 @@ class RatingViewController: UIViewController {
                   let cat = sender as? CatInfo else { return }
 
             catPage.cat = cat
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = "Рейтинг котов"
+            navigationItem.backBarButtonItem = backItem
         }
     }
 }
