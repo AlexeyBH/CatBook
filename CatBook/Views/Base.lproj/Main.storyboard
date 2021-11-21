@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K3h-Xu-cue">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K3h-Xu-cue">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,7 +40,7 @@
                     <connections>
                         <outlet property="tableView" destination="6RY-B3-EJ6" id="m36-Q4-0BK"/>
                         <segue destination="SEF-3S-ovS" kind="show" identifier="showAboutScreen" id="pCd-uK-H1t"/>
-                        <segue destination="SqE-B3-F5k" kind="show" identifier="showCatDetailScreen" id="ewx-hn-RhE"/>
+                        <segue destination="SqE-B3-F5k" kind="show" identifier="showCatDetailScreen" id="sx6-Ue-L2d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yzq-ae-6vb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -10,12 +10,22 @@ import UIKit
 class RatingViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    let cats = CatDatabase.shared.catsByRating
     
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
         
         tableView.register(RatingTableViewCell.nib, forCellReuseIdentifier: RatingTableViewCell.identifier)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCatDetailScreen" {
+            guard let catPage = segue.destination as? CatPageViewController,
+                  let cat = sender as? CatInfo else { return }
+
+            catPage.cat = cat
+        }
     }
 }
 
@@ -30,7 +40,7 @@ extension RatingViewController {
 extension RatingViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CatDatabase.shared.catsByRating.count
+        return cats.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,6 +65,6 @@ extension RatingViewController: UITableViewDataSource {
 extension RatingViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showCatDetailScreen", sender: nil)
+        performSegue(withIdentifier: "showCatDetailScreen", sender: cats[indexPath.row])
     }
 }
