@@ -16,6 +16,7 @@
 		4A4AAA5E274178C600D02CF1 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4AAA5D274178C600D02CF1 /* RatingViewController.swift */; };
 		4AB2C8682742333800C70D91 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB2C8672742333800C70D91 /* UITableViewCell+Extensions.swift */; };
 		4ADE339A274160A7007726BE /* RatingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ADE3398274160A7007726BE /* RatingTableViewCell.xib */; };
+		4AE8002D274A664100F1D247 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 4AE8002C274A664100F1D247 /* Models */; };
 		FB7E606B2740119200413E30 /* CatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7E606A2740119200413E30 /* CatPageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		4A4AAA5D274178C600D02CF1 /* RatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewController.swift; sourceTree = "<group>"; };
 		4AB2C8672742333800C70D91 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		4ADE3398274160A7007726BE /* RatingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingTableViewCell.xib; sourceTree = "<group>"; };
+		4AE8002C274A664100F1D247 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		FB7E606A2740119200413E30 /* CatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 		42A39F32273FDE6E00F8B2BA /* CatBook */ = {
 			isa = PBXGroup;
 			children = (
+				4AE8002C274A664100F1D247 /* Models */,
 				4AB2C8662742331400C70D91 /* Extensions */,
 				42A39F33273FDE6E00F8B2BA /* AppDelegate.swift */,
 				42A39F35273FDE6E00F8B2BA /* SceneDelegate.swift */,
@@ -185,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE8002D274A664100F1D247 /* Models in Resources */,
 				4ADE339A274160A7007726BE /* RatingTableViewCell.xib in Resources */,
 				42A39F40273FDE6F00F8B2BA /* LaunchScreen.storyboard in Resources */,
 				42A39F3D273FDE6F00F8B2BA /* Assets.xcassets in Resources */,
