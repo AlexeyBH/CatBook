@@ -57,18 +57,18 @@ func catInit() -> [CatInfo] {
     // Картинка котика определяет некоторые его параметры
     // База - то есть картинка с конкретным котиком
     var catBase: [String: CatOptions] = [
-        "Cat_01":   CatOptions(.any,    .fat,    .black),
-        "Cat_02":   CatOptions(.any,    .fat,    .gray),
-        "Cat_03":   CatOptions(.any,    .lean,   .black),
-        "Cat_04":   CatOptions(.any,    .fat,    .gray),
-        "Cat_05":   CatOptions(.any,    .fat,    .red),
-        "Cat_06":   CatOptions(.any,    .fat,    .red),
-        "Cat_07":   CatOptions(.any,    .normal, .brown),
-        "Cat_08":   CatOptions(.any,    .normal, .gray),
-        "Cat_09":   CatOptions(.any,    .normal, .brown),
-        "Cat_10":   CatOptions(.any,    .normal, .gray),
-        "Cat_11":   CatOptions(.any,    .lean,   .gray),
-        "Cat_12":   CatOptions(.any,    .lean,   .black),
+        "CatImage_1":   CatOptions(.any,    .fat,    .black),
+        "CatImage_2":   CatOptions(.any,    .fat,    .gray),
+        "CatImage_3":   CatOptions(.any,    .lean,   .black),
+        "CatImage_4":   CatOptions(.any,    .fat,    .gray),
+        "CatImage_5":   CatOptions(.any,    .fat,    .red),
+        "CatImage_6":   CatOptions(.any,    .fat,    .red),
+        "CatImage_7":   CatOptions(.any,    .normal, .brown),
+        "CatImage_8":   CatOptions(.any,    .normal, .gray),
+        "CatImage_9":   CatOptions(.any,    .normal, .brown),
+        "CatImage_10":   CatOptions(.any,    .normal, .gray),
+        "CatImage_11":   CatOptions(.any,    .lean,   .gray),
+        "CatImage_12":   CatOptions(.any,    .lean,   .black),
     ]
     
     // Имена котиков в зависимости от пола и, иногда, цвета

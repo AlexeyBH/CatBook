@@ -64,7 +64,7 @@ extension RatingViewController: UITableViewDataSource {
 extension RatingViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "showCatDetailScreen", sender: nil)
+
         performSegue(withIdentifier: "showCatDetailScreen", sender: cats[indexPath.row])
 
     }
