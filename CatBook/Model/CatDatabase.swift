@@ -1,4 +1,3 @@
-
 //
 //  CatInfo.swift
 //  CatBook
@@ -22,7 +21,7 @@ class CatInfo {
     private var ratingPrivate: Double = 0
     
     var rating: Double {
-        ratingPrivate
+        Double(100 * votesTotal / votesCount) / 100.0
     }
     
     var canBeVotedFor: Bool {
@@ -30,12 +29,11 @@ class CatInfo {
     }
     
     func voteFor(rating: Int) -> Double {
-        guard rating >= 1 && rating <= 5, !alreadyVotedFor else { return ratingPrivate }
+        guard rating >= 1 && rating <= 5, !alreadyVotedFor else { return self.rating }
         alreadyVotedFor = true
         votesTotal += rating
         votesCount += 1
-        ratingPrivate = Double(100 * votesTotal / votesCount) / 100.0
-        return ratingPrivate
+        return self.rating
     }
     
     init?(name: String, description: String, imagePath: String, initialVotesTotal: Int, initialVotesCount: Int) {
@@ -53,6 +51,7 @@ class CatInfo {
         self.imagePath = imagePath
         self.votesCount = initialVotesCount
         self.votesTotal = initialVotesTotal
+
     }
 }
 
@@ -73,12 +72,6 @@ class CatDatabase {
   
     private init() {
         cats = catInit()
-        
-        for cat in cats {
-            print("name: \(cat.name), hobbies: \(cat.description), image: \(cat.imagePath)")
-        }
     }
     
 }
-
-

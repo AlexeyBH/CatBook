@@ -2,28 +2,59 @@
 //  RatingViewController.swift
 //  CatBook
 //
-//  Created by Alexey Khestanov on 21.11.2021.
+//  Created by Михаил Зиновьев on 14.11.2021.
 //
 
 import UIKit
 
 class RatingViewController: UIViewController {
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        tableView.register(RatingTableViewCell.nib, forCellReuseIdentifier: RatingTableViewCell.identifier)
+    }
+}
 
-        // Do any additional setup after loading the view.
+//MARK: - @IBAction
+extension RatingViewController {
+    @IBAction func aboutUsButtonPressed(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "showAboutScreen", sender: nil)
+    }
+}
+
+//MARK: - UITableViewDataSource
+extension RatingViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return CatDatabase.shared.catsByRating.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView
+                .dequeueReusableCell(
+                    withIdentifier: RatingTableViewCell.identifier,
+                    for: indexPath) as? RatingTableViewCell
+        else { return UITableViewCell() }
+        
+        let cat = CatDatabase.shared.catsByRating[indexPath.row]
+        cell.configure(image: UIImage(named: cat.imagePath), name: cat.name, rating: String(cat.rating))
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        return cell
     }
-    */
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
+}
 
+//MARK: - UITableViewDelegate
+extension RatingViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showCatDetailScreen", sender: nil)
+    }
 }

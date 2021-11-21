@@ -2,28 +2,50 @@
 //  CatPageViewController.swift
 //  CatBook
 //
-//  Created by Alexey Khestanov on 21.11.2021.
+//  Created by Anna Ivanova on 13.11.2021.
 //
 
 import UIKit
 
-class CatPageViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+class CatPageViewController: UITableViewController {
     
 
-    /*
-    // MARK: - Navigation
+    @IBOutlet var imageCat: UIImageView!
+    @IBOutlet var nameCatLable: UILabel!
+    @IBOutlet var descriptionСatLable: UILabel!
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    */
+    
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        CatDatabase.shared.catsByRating.count
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "phoneRecord", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        let cat = CatDatabase.shared.randomCatToVote
+        content.text = cat?.name
+        cell.contentConfiguration = content
+     
+        return cell
+    }
+    
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let destination = segue.destination as? UserDetailsViewController,
+//              let indexPath = tableView.indexPathForSelectedRow else { return }
+//        destination.userInfo = userList.asArray[indexPath.section]
+//    }
+ 
 
 }
